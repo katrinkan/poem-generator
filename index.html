@@ -3,47 +3,41 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
     <link rel="stylesheet" href="src/style.css" />
     <title>AI Poems Generator</title>
   </head>
   <body>
-    <header><h1>Poem Generator</h1></header>
-    <main>
-      <section>
-        <label for="theme">Choose a theme</label>
-        <input
-          type="text"
-          id="theme"
-          placeholder="Choose a theme for your poem"
-          autofocus
-          required
-          autocomplete="off"
-        />
-        <button type="submit">Submit</button>
-      </section>
-      <section>
-        <p>
-          Sie können mich in der Geschichte beschreiben
-          <br />
-          mit verdrehten Lügen,
-          <br />
-          Sie können mich in den Müll selbst ziehen
-          <br />
-          Trotzdem wache ich wie Staub auf.
-          <br />
-          Verblüfft dich meine Unverschämtheit?
-          <br />
-          Weil ich gehe, als hätte ich Ölquellen
-          <br />
-          In mein Wohnzimmer pumpen.
-        </p>
-      </section>
-    </main>
+    <div class="container">
+      <header><h1>Poem Generator</h1></header>
+      <main>
+        <section>
+          <form id="theme-input">
+            <label for="theme">Choose a theme</label>
+            <input
+              type="text"
+              id="theme"
+              placeholder="Choose a theme for your poem"
+              autofocus
+              required
+              autocomplete="off"
+              class="input"
+            />
+            <input type="submit" class="submit-button" />
+          </form>
+        </section>
+        <section>
+          <p id="poem" class="poem"></p>
+        </section>
+      </main>
 
-    <footer>
-      <a href="https://github.com/katrinkan/poem-generator">Coded</a> with 💜 by
-      Katrin Kanape
-    </footer>
+      <footer>
+        <a href="https://github.com/katrinkan/poem-generator" target="_blank"
+          >Coded</a
+        >
+        with 💜 by Katrin Kanape
+      </footer>
+    </div>
     <script src="src/index.js"></script>
   </body>
 </html>
