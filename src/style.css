@@ -66,8 +66,7 @@ form {
   align-self: center;
   margin-left: -30px;
   font-size: large;
-  border: none;
-  background-color: transparent;
+  cursor: pointer;
 }
 
 .submit-button {
@@ -101,6 +100,9 @@ footer {
 }
 
 @media (max-width: 450px) {
+  .container {
+    margin: 80px auto;
+  }
   form {
     flex-wrap: wrap;
     justify-content: space-evenly;

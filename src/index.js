@@ -11,11 +11,19 @@ function addReset() {
 }
 
 function handleReset(event) {
-  event.preventDefault();
-  userInput.value = "";
-  poemElement.innerHTML = "";
-  poemElement.classList.add("hidden");
-  resetElement.classList.add("hidden");
+  if (
+    event.type === "click" ||
+    event.key === "Enter" ||
+    event.type === "touchstart"
+  ) {
+    event.preventDefault();
+    userInput.value = "";
+    poemElement.innerHTML = "";
+    poemElement.classList.add("hidden");
+    resetElement.classList.add("hidden");
+  } else {
+    return;
+  }
 }
 
 function displayPoem(response) {
@@ -48,4 +56,6 @@ async function generatePoem(event) {
 
 userInput.addEventListener("input", addReset);
 themeInputForm.addEventListener("submit", generatePoem);
-resetElement.addEventListener("click", handleReset);
+["click", "keydown", "touchstart"].forEach((event) =>
+  resetElement.addEventListener(event, handleReset)
+);
