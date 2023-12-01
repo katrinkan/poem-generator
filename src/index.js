@@ -49,3 +49,4 @@ async function generatePoem(event) {
 userInput.addEventListener("input", addReset);
 themeInputForm.addEventListener("submit", generatePoem);
 resetElement.addEventListener("click", handleReset);
+resetElement.addEventListener("keydown", handleReset);

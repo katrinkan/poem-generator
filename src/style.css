@@ -90,7 +90,7 @@ form {
 }
 
 .hidden {
-  display: none;
+  visibility: hidden;
 }
 
 footer {
