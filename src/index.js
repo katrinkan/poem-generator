@@ -11,11 +11,20 @@ function addReset() {
 }
 
 function handleReset(event) {
-  event.preventDefault();
-  userInput.value = "";
-  poemElement.innerHTML = "";
-  poemElement.classList.add("hidden");
-  resetElement.classList.add("hidden");
+  if (
+    event.click ||
+    event.key === "" ||
+    event.key === "Enter" ||
+    event.key === "Spacebar"
+  ) {
+    event.preventDefault();
+    userInput.value = "";
+    poemElement.innerHTML = "";
+    poemElement.classList.add("hidden");
+    resetElement.classList.add("hidden");
+  } else {
+    return;
+  }
 }
 
 function displayPoem(response) {
