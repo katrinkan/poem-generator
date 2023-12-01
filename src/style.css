@@ -66,7 +66,8 @@ form {
   align-self: center;
   margin-left: -30px;
   font-size: large;
-  cursor: pointer;
+  border: none;
+  background-color: transparent;
 }
 
 .submit-button {
