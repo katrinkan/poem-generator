@@ -79,6 +79,16 @@ form {
   color: white;
   background: #885df1;
 }
+.submit-button:hover {
+  border: 1px solid #7f57e0;
+  color: #7f57e0;
+  background-color: #f9f7fe;
+}
+.clicked {
+  border: 1px solid #7f57e0;
+  color: #7f57e0;
+  background-color: #f9f7fe;
+}
 
 .poem {
   padding: 20px;
@@ -91,6 +101,10 @@ form {
 
 .hidden {
   visibility: hidden;
+}
+
+.noPoem {
+  display: none;
 }
 
 footer {

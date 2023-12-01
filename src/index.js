@@ -2,6 +2,7 @@ const themeInputForm = document.querySelector("#theme-input");
 const resetElement = document.querySelector("#reset");
 const userInput = document.querySelector("#theme");
 const poemElement = document.querySelector("#poem");
+const buttonElement = document.querySelector("#submit-button");
 
 function addReset() {
   if (userInput.value) {
@@ -19,8 +20,10 @@ function handleReset(event) {
     event.preventDefault();
     userInput.value = "";
     poemElement.innerHTML = "";
-    poemElement.classList.add("hidden");
+    poemElement.classList.add("noPoem");
     resetElement.classList.add("hidden");
+    buttonElement.value = "Generate";
+    buttonElement.classList.remove("clicked");
   } else {
     return;
   }
@@ -33,6 +36,8 @@ function displayPoem(response) {
     delay: 1,
     cursor: "",
   });
+  buttonElement.value = "Generate";
+  buttonElement.classList.remove("clicked");
 }
 
 async function generatePoem(event) {
@@ -43,7 +48,9 @@ async function generatePoem(event) {
   const prompt = `Generate a poem about ${userInput.value}`;
   const apiUrl = `https://api.shecodes.io/ai/v1/generate?prompt=${prompt}&context=${context}&key=${apiKey}`;
 
-  poemElement.classList.remove("hidden");
+  buttonElement.classList.add("clicked");
+  buttonElement.value = "Generating";
+  poemElement.classList.remove("noPoem");
   poemElement.innerHTML = `Generating a poem about ${userInput.value.toLowerCase()}`;
 
   try {
