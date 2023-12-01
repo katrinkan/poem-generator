@@ -101,7 +101,7 @@ footer {
 
 @media (max-width: 450px) {
   .container {
-    margin: 80px auto;
+    margin: 50px auto;
   }
   form {
     flex-wrap: wrap;

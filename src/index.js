@@ -42,6 +42,7 @@ async function generatePoem(event) {
     "You are an AI assistant writing short poems. Your mission is to generate a 4 line poem in basic HTML using <p/> and seperate each line using <br/>";
   const prompt = `Generate a poem about ${userInput.value}`;
   const apiUrl = `https://api.shecodes.io/ai/v1/generate?prompt=${prompt}&context=${context}&key=${apiKey}`;
+
   poemElement.classList.remove("hidden");
   poemElement.innerHTML = `Generating a poem about ${userInput.value.toLowerCase()}`;
 
@@ -50,7 +51,6 @@ async function generatePoem(event) {
     displayPoem(response);
   } catch (error) {
     poemElement.innerHTML = "Sorry, something went wrong. Please try again!";
-    console.log(error);
   }
 }
 
