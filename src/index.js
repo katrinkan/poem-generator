@@ -15,7 +15,8 @@ function handleReset(event) {
     event.click ||
     event.key === "" ||
     event.key === "Enter" ||
-    event.key === "Spacebar"
+    event.key === "Spacebar" ||
+    event.touch
   ) {
     event.preventDefault();
     userInput.value = "";
@@ -59,3 +60,4 @@ userInput.addEventListener("input", addReset);
 themeInputForm.addEventListener("submit", generatePoem);
 resetElement.addEventListener("click", handleReset);
 resetElement.addEventListener("keydown", handleReset);
+resetElement.addEventListener("touchstart", handleReset);
