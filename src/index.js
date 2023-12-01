@@ -1,3 +1,5 @@
+let themeInputForm = document.querySelector("#theme-input");
+
 function displayPoem(response) {
   new Typewriter("#poem", {
     strings: response.data.answer,
@@ -17,7 +19,9 @@ async function generatePoem(event) {
   const prompt = `Generate a poem about ${userInput.value}`;
   const apiUrl = `https://api.shecodes.io/ai/v1/generate?prompt=${prompt}&context=${context}&key=${apiKey}`;
 
+  poemElement.classList.remove("hidden");
   poemElement.innerHTML = `Generating a poem about ${userInput.value.toLowerCase()}`;
+
   try {
     const response = await axios.get(apiUrl);
     console.log(response);
@@ -28,5 +32,4 @@ async function generatePoem(event) {
   }
 }
 
-let themeInputElement = document.querySelector("#theme-input");
-themeInputElement.addEventListener("submit", generatePoem);
+themeInputForm.addEventListener("submit", generatePoem);

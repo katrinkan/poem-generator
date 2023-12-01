@@ -14,21 +14,22 @@
       <main>
         <section>
           <form id="theme-input">
-            <label for="theme">Choose a theme</label>
+            <label for="theme">Choose a theme for your poem</label>
             <input
               type="text"
               id="theme"
-              placeholder="Choose a theme for your poem"
+              placeholder="e.g. trees"
               autofocus
               required
               autocomplete="off"
               class="input"
             />
+            <div class="reset">x</div>
             <input type="submit" class="submit-button" />
           </form>
         </section>
         <section>
-          <div id="poem" class="poem"></div>
+          <div id="poem" class="poem hidden"></div>
         </section>
       </main>
 
@@ -36,9 +37,9 @@
         <a href="https://github.com/katrinkan/poem-generator" target="_blank"
           >Coded</a
         >
-        with 💜 by Katrin Kanape for
+        with 💜 by Katrin Kanape for the
         <a href="https://www.shecodes.io/" target="_blank">SheCodes</a> AI
-        course
+        course.
       </footer>
     </div>
     <script src="src/index.js"></script>
