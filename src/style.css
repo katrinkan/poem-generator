@@ -13,10 +13,10 @@ body {
 }
 
 body {
+  font-family: Helvetica, Arial, sans-serif;
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
   background-color: #f9f7fe;
-  font-family: Helvetica, Arial, sans-serif;
 }
 input,
 button {
@@ -28,8 +28,8 @@ a {
 }
 
 .container {
-  margin: 120px auto;
   max-width: 800px;
+  margin: 120px auto;
 }
 
 header {
@@ -37,27 +37,27 @@ header {
 }
 
 h1 {
-  text-align: center;
-  font-weight: 800;
   font-size: 36px;
+  font-weight: 800;
+  text-align: center;
   color: #272044;
 }
 
 form {
-  padding: 30px;
-  background-color: white;
-  box-shadow: 0px 20px 60px rgba(65, 50, 100, 0.08);
-  border-radius: 10px;
   display: flex;
   margin-bottom: 30px;
+  padding: 30px;
+  box-shadow: 0px 20px 60px rgba(65, 50, 100, 0.08);
+  border-radius: 10px;
+  background-color: white;
 }
 
 .input {
+  width: 80%;
   padding: 16px;
   border: 1px solid rgba(39, 33, 66, 0.5);
-  width: 80%;
-  font-size: 16px;
   border-radius: 50px;
+  font-size: 16px;
   line-height: 20px;
   color: #272044;
 }
@@ -70,23 +70,23 @@ form {
 }
 
 .submit-button {
-  margin-left: 30px;
-  background: #885df1;
-  color: white;
-  border: none;
   width: 150px;
-  font-size: 16px;
-  border-radius: 50px;
+  margin-left: 30px;
   padding: 14px 24px;
+  border: none;
+  border-radius: 50px;
+  font-size: 16px;
+  color: white;
+  background: #885df1;
 }
 
 .poem {
-  font-size: 16px;
-  background-color: #fff;
   padding: 20px;
-  line-height: 2;
-  border-left: 3px solid #885df1;
   box-shadow: 0px 4px 30px 0px rgba(39, 33, 66, 0.03);
+  border-left: 3px solid #885df1;
+  font-size: 16px;
+  line-height: 2;
+  background-color: #fff;
 }
 
 .hidden {
@@ -94,9 +94,9 @@ form {
 }
 
 footer {
-  text-align: center;
-  font-size: 13px;
   margin-top: 30px;
+  font-size: 13px;
+  text-align: center;
 }
 
 @media (max-width: 450px) {

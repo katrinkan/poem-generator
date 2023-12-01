@@ -3,11 +3,19 @@ const resetElement = document.querySelector("#reset");
 const userInput = document.querySelector("#theme");
 const poemElement = document.querySelector("#poem");
 
+function addReset() {
+  if (userInput.value) {
+    resetElement.classList.remove("hidden");
+  }
+  return;
+}
+
 function handleReset(event) {
   event.preventDefault();
   userInput.value = "";
   poemElement.innerHTML = "";
   poemElement.classList.add("hidden");
+  resetElement.classList.add("hidden");
 }
 
 function displayPoem(response) {
@@ -41,5 +49,6 @@ async function generatePoem(event) {
   }
 }
 
+userInput.addEventListener("input", addReset);
 themeInputForm.addEventListener("submit", generatePoem);
 resetElement.addEventListener("click", handleReset);
