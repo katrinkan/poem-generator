@@ -1,4 +1,14 @@
-let themeInputForm = document.querySelector("#theme-input");
+const themeInputForm = document.querySelector("#theme-input");
+const resetElement = document.querySelector("#reset");
+const userInput = document.querySelector("#theme");
+const poemElement = document.querySelector("#poem");
+
+function handleReset(event) {
+  event.preventDefault();
+  userInput.value = "";
+  poemElement.innerHTML = "";
+  poemElement.classList.add("hidden");
+}
 
 function displayPoem(response) {
   new Typewriter("#poem", {
@@ -11,8 +21,7 @@ function displayPoem(response) {
 
 async function generatePoem(event) {
   event.preventDefault();
-  let userInput = document.querySelector("#theme");
-  let poemElement = document.querySelector("#poem");
+
   const apiKey = "cc10t459o5bb3a3939c42b9f760a834f";
   const context =
     "You are an AI assistant writing short poems. Your mission is to generate a 4 line poem in basic HTML using <p/> and seperate each line using <br/>";
@@ -33,3 +42,4 @@ async function generatePoem(event) {
 }
 
 themeInputForm.addEventListener("submit", generatePoem);
+resetElement.addEventListener("click", handleReset);
